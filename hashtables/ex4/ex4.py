@@ -13,11 +13,9 @@ def has_negatives(a):
         x = abs(i)
         new[x] = 1+new.get(x, 0)
     keys = list(new.keys())
-    print(new)
     for l in new:
-        print(new[l])
         if new[l] >= 2:
-            more.append(keys[l])
+            more.append(keys[l-1])
     return more
 
 
